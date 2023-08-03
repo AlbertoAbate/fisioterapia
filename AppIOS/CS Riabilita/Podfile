@@ -1,0 +1,35 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'CS Riabilita' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+  pod 'GoogleMaps'
+  pod 'Firebase/Core'
+  pod 'Firebase/Messaging'
+  pod 'Firebase/Crash'
+  pod 'SwiftMessages'
+  pod 'Alamofire'
+  pod 'AlamofireImage'
+  #pod 'ZAlertView'
+  #pod 'SkyFloatingLabelTextField'
+  pod 'IQKeyboardManager'
+  #pod 'IQKeyboardManager', :git => 'https://github.com/hackiftekhar/IQKeyboardManager', :branch => 'master'
+  #pod 'DotsLoading'
+  #pod 'QRCodeReader.swift'
+  #pod 'NavigationDrawer'
+  pod "Atributika"
+  #pod 'SwiftPhotoGallery'
+  #pod "MomentsGallery"
+  #pod 'ImageSlideShowSwift'
+  #pod 'SwiftImageSlider'
+  pod 'PMAlertController'
+  pod 'Floaty'
+#  pod 'LIHImageSlider'
+#pod "PhotoSlider"
+pod 'ImageSlideshow'
+pod "ImageSlideshow/Alamofire"
+
+  # Pods for CS Riabilita
+
+end

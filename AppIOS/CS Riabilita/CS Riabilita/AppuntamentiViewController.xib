@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AppuntamentiViewController" customModule="CS_Riabilita" customModuleProvider="target">
+            <connections>
+                <outlet property="AppuntamentiTableView" destination="blp-TC-8ym" id="f3R-z6-SB8"/>
+                <outlet property="indietro" destination="5fi-At-vBU" id="pux-Cx-Jqn"/>
+                <outlet property="logoBianco" destination="1Ss-J5-1ML" id="ltg-U2-7TJ"/>
+                <outlet property="nessunAppuntamentoLabel" destination="eWf-dV-Jln" id="9A8-Y6-Ekg"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="5fi-At-vBU">
+                    <rect key="frame" x="132" y="754" width="129" height="35"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Torna indietro"/>
+                    <connections>
+                        <action selector="tornaIndietro:" destination="-1" eventType="touchUpInside" id="Vgj-Vy-7Bk"/>
+                    </connections>
+                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logobianco" translatesAutoresizingMaskIntoConstraints="NO" id="1Ss-J5-1ML">
+                    <rect key="frame" x="20" y="69" width="353" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="l4d-dp-kZD"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I miei appuntamenti" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iMK-Fa-5Qe">
+                    <rect key="frame" x="132" y="135" width="241" height="83"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </label>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="qbk-qQ-DQM" userLabel="Nuovi, Tutti">
+                    <rect key="frame" x="59" y="211" width="275" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="31" id="xt1-tS-Hh9"/>
+                    </constraints>
+                    <segments>
+                        <segment title="Prossimi"/>
+                        <segment title="Tutti"/>
+                    </segments>
+                    <connections>
+                        <action selector="appuntamentoValueChanged:" destination="-1" eventType="valueChanged" id="Kjv-et-x8a"/>
+                    </connections>
+                </segmentedControl>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="blp-TC-8ym">
+                    <rect key="frame" x="0.0" y="284" width="393" height="440"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appuntamenti" id="OLo-8e-QyG">
+                    <rect key="frame" x="59" y="161" width="43" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Nessun Appuntamento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWf-dV-Jln">
+                    <rect key="frame" x="59" y="293" width="275" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.094117647058823528" green="0.3529411764705882" blue="0.49019607843137253" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1Ss-J5-1ML" secondAttribute="trailing" constant="20" id="09h-fz-7iR"/>
+                <constraint firstItem="1Ss-J5-1ML" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="1EG-vT-BiU"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="eWf-dV-Jln" secondAttribute="trailing" constant="59" id="62N-ye-4ti"/>
+                <constraint firstItem="qbk-qQ-DQM" firstAttribute="top" secondItem="OLo-8e-QyG" secondAttribute="bottom" constant="20" id="9YF-wS-Sre"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qbk-qQ-DQM" secondAttribute="trailing" constant="59" id="ANi-d2-Ik8"/>
+                <constraint firstItem="1Ss-J5-1ML" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="LMQ-6e-v3K"/>
+                <constraint firstItem="blp-TC-8ym" firstAttribute="top" secondItem="eWf-dV-Jln" secondAttribute="bottom" constant="8" symbolic="YES" id="MhO-gT-G8S"/>
+                <constraint firstItem="eWf-dV-Jln" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="59" id="Vt4-EA-UOe"/>
+                <constraint firstItem="qbk-qQ-DQM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="59" id="Wta-g4-7fr"/>
+                <constraint firstItem="eWf-dV-Jln" firstAttribute="top" secondItem="qbk-qQ-DQM" secondAttribute="bottom" constant="13" id="qY4-Zq-ftn"/>
+            </constraints>
+            <point key="canvasLocation" x="-45.038167938931295" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="appuntamenti" width="146" height="148"/>
+        <image name="logobianco" width="550.66668701171875" height="168.33332824707031"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="VideoElementoViewCell" rowHeight="159" id="KGk-i7-Jjw" customClass="VideoElementoViewCell" customModule="CS_Riabilita" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="159"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="159"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oIc-Np-NOj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="159"/>
+                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="159" id="WhS-Ex-8H6"/>
+                        </constraints>
+                        <wkWebViewConfiguration key="configuration">
+                            <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                            <wkPreferences key="preferences"/>
+                        </wkWebViewConfiguration>
+                    </wkWebView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="oIc-Np-NOj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="5eM-ts-DYQ"/>
+                    <constraint firstAttribute="trailing" secondItem="oIc-Np-NOj" secondAttribute="trailing" id="ICD-oK-Iig"/>
+                    <constraint firstItem="oIc-Np-NOj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Jvb-wU-rSX"/>
+                    <constraint firstAttribute="bottom" secondItem="oIc-Np-NOj" secondAttribute="bottom" id="Teh-9t-QQo"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="heightConstant" destination="WhS-Ex-8H6" id="2Kj-lh-N2X"/>
+                <outlet property="webView" destination="oIc-Np-NOj" id="xq0-i0-DMZ"/>
+            </connections>
+            <point key="canvasLocation" x="-197.10144927536234" y="59.933035714285708"/>
+        </tableViewCell>
+    </objects>
+</document>

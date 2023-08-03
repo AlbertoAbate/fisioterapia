@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Hind-SemiBold.ttf">
+            <string>Hind-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MessaggiViewController" customModule="CS_Riabilita" customModuleProvider="target">
+            <connections>
+                <outlet property="bttClose" destination="kad-xP-LmO" id="RMr-6f-tmg"/>
+                <outlet property="lblTitle" destination="fzi-Lw-xNg" id="F35-kC-qe3"/>
+                <outlet property="tableMessaggi" destination="Qz5-1N-DR7" id="JM6-SV-EsR"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logobianco" translatesAutoresizingMaskIntoConstraints="NO" id="qt4-WO-7qv">
+                    <rect key="frame" x="20" y="44" width="374" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="oRx-mL-0fq"/>
+                    </constraints>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.backward" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="kad-xP-LmO">
+                    <rect key="frame" x="20" y="53" width="25" height="31.5"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="25" id="AnJ-jC-tLT"/>
+                        <constraint firstAttribute="height" constant="35" id="zFV-bS-86j"/>
+                    </constraints>
+                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--scrivi--" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzi-Lw-xNg">
+                    <rect key="frame" x="0.0" y="94" width="414" height="46"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="46" id="Bl3-PE-y3C"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Hind-SemiBold" family="Hind" pointSize="24"/>
+                    <color key="textColor" red="0.16078431369999999" green="0.40784313729999999" blue="0.5450980392" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qz5-1N-DR7">
+                    <rect key="frame" x="0.0" y="148" width="414" height="748"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.16078431369999999" green="0.40784313729999999" blue="0.5450980392" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Qz5-1N-DR7" secondAttribute="bottom" id="0lF-In-wi9"/>
+                <constraint firstItem="Qz5-1N-DR7" firstAttribute="top" secondItem="fzi-Lw-xNg" secondAttribute="bottom" constant="8" symbolic="YES" id="4u5-3C-veW"/>
+                <constraint firstItem="qt4-WO-7qv" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="6Tf-gP-tiC"/>
+                <constraint firstItem="fzi-Lw-xNg" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="9vs-z9-hr7"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qt4-WO-7qv" secondAttribute="trailing" constant="20" id="EEd-Aq-0ov"/>
+                <constraint firstItem="fzi-Lw-xNg" firstAttribute="top" secondItem="qt4-WO-7qv" secondAttribute="bottom" constant="2" id="QeX-Ut-Qh7"/>
+                <constraint firstItem="kad-xP-LmO" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="7" id="Qzf-AP-M4J"/>
+                <constraint firstItem="fzi-Lw-xNg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="T8E-SR-dAs"/>
+                <constraint firstItem="Qz5-1N-DR7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="dQo-8M-PQH"/>
+                <constraint firstItem="qt4-WO-7qv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="fBn-f9-OGO"/>
+                <constraint firstItem="kad-xP-LmO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="nh4-Pk-Rds"/>
+                <constraint firstItem="Qz5-1N-DR7" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="vpi-EO-bty"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="89.732142857142847"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <image name="logobianco" width="253" height="61"/>
+    </resources>
+</document>

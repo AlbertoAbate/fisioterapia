@@ -1,0 +1,6 @@
+framework module Pods_CS_Riabilita {
+  umbrella header "Pods-CS Riabilita-umbrella.h"
+
+  export *
+  module * { export * }
+}
