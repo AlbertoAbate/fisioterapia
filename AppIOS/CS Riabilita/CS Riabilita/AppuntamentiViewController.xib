@@ -69,8 +69,11 @@
                     <rect key="frame" x="59" y="161" width="43" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Nessun Appuntamento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWf-dV-Jln">
-                    <rect key="frame" x="59" y="293" width="275" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nessun Appuntamento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWf-dV-Jln">
+                    <rect key="frame" x="59" y="392" width="275" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="xYw-4e-fJr"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -85,10 +88,10 @@
                 <constraint firstItem="qbk-qQ-DQM" firstAttribute="top" secondItem="OLo-8e-QyG" secondAttribute="bottom" constant="20" id="9YF-wS-Sre"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qbk-qQ-DQM" secondAttribute="trailing" constant="59" id="ANi-d2-Ik8"/>
                 <constraint firstItem="1Ss-J5-1ML" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="LMQ-6e-v3K"/>
-                <constraint firstItem="blp-TC-8ym" firstAttribute="top" secondItem="eWf-dV-Jln" secondAttribute="bottom" constant="8" symbolic="YES" id="MhO-gT-G8S"/>
+                <constraint firstItem="blp-TC-8ym" firstAttribute="top" secondItem="qbk-qQ-DQM" secondAttribute="bottom" constant="42" id="Uxz-Yc-CbG"/>
                 <constraint firstItem="eWf-dV-Jln" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="59" id="Vt4-EA-UOe"/>
                 <constraint firstItem="qbk-qQ-DQM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="59" id="Wta-g4-7fr"/>
-                <constraint firstItem="eWf-dV-Jln" firstAttribute="top" secondItem="qbk-qQ-DQM" secondAttribute="bottom" constant="13" id="qY4-Zq-ftn"/>
+                <constraint firstItem="eWf-dV-Jln" firstAttribute="top" secondItem="qbk-qQ-DQM" secondAttribute="bottom" constant="150" id="kqw-Wb-bN1"/>
             </constraints>
             <point key="canvasLocation" x="-45.038167938931295" y="19.718309859154932"/>
         </view>

@@ -27,7 +27,6 @@ class InfoTerapiaViewController: UIViewController {
         super.viewDidLoad()
 
         indietro.setTitle(Utility.getLbl(code: "TORNAINDIETRO"), for: .normal)
-
         // Do any additional setup after loading the view.
         // Set the terapia data to the labels
         titleTera.text = Utility.getLbl(code: "TITLETERAPIA");

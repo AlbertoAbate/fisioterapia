@@ -15,12 +15,12 @@ class ProfiloViewController: UIViewController {
     
     @IBOutlet weak var cittaProfi: UILabel!
     @IBOutlet weak var TelefonoProfi: UILabel!
-    @IBOutlet weak var cfProfi: UILabel!
     @IBOutlet weak var emailProfi: UILabel!
     @IBOutlet weak var cognomeProfi: UILabel!
     @IBOutlet weak var nomeProfi: UILabel!
     @IBOutlet weak var indietro: UIButton!
     @IBOutlet weak var logoBianco: UIImageView!
+    @IBOutlet weak var codiceFiscaleProfi: UILabel!
     var profiloList = [Profilo]()
 
     override func viewDidLoad() {
@@ -49,6 +49,10 @@ class ProfiloViewController: UIViewController {
         cittaProfi.layer.cornerRadius = 10;
         cittaProfi.clipsToBounds = true
         
+        codiceFiscaleProfi.text = GeneralUtil.shared.user.cf
+        codiceFiscaleProfi.layer.cornerRadius = 10;
+        codiceFiscaleProfi.clipsToBounds = true
+        
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.headIndent = 10
         paragraphStyle.firstLineHeadIndent = 10
@@ -72,8 +76,20 @@ class ProfiloViewController: UIViewController {
         let attributedStringCitta = NSAttributedString(string: GeneralUtil.shared.user.address, attributes: [NSAttributedString.Key.paragraphStyle: paragraphStyle])
 
         cittaProfi.attributedText = attributedStringCitta
+        
+        let attributedStringCf = NSAttributedString(string: GeneralUtil.shared.user.cf, attributes: [NSAttributedString.Key.paragraphStyle: paragraphStyle])
 
+        codiceFiscaleProfi.attributedText = attributedStringCf
+        
+        if cittaProfi.text == "" {
+                cittaProfi.isHidden = true
+            }
 
+            if codiceFiscaleProfi.text == "" {
+                codiceFiscaleProfi.isHidden = true
+            }
+
+        
         loadProfilo()
     }
     
@@ -82,7 +98,7 @@ class ProfiloViewController: UIViewController {
     }
     
     func loadProfilo() {
-        let url = "https://csriabilita.it/admin/phpService/AppServices.php"
+        let url = Utility.getBaseUrl()
         
         let parameters: Parameters = [
             "action": "getUser",
@@ -93,6 +109,8 @@ class ProfiloViewController: UIViewController {
             .responseString { response in
                 print("DETTAGLI USER")
                 print("Response doc1",response);
+                print("Response doc1",response);
+
             }
             .responseJSON { response in
                 

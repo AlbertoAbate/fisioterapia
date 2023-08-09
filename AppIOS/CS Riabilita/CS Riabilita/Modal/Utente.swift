@@ -31,7 +31,7 @@ class Utente: NSObject,MessagingDelegate {
     var role: String!
     var phone: String!
     var address: String!
-    //var cf: String!
+    var cf: String!
     
     public override init() {
         token = "";
@@ -41,7 +41,7 @@ class Utente: NSObject,MessagingDelegate {
         role = "";
         phone = "";
         address = "";
-        //cf = "";
+        cf = "";
     }
     
     init?(from jsonObject: AnyObject) {
@@ -49,7 +49,7 @@ class Utente: NSObject,MessagingDelegate {
             let bSurname: String = jsonObject.object(forKey: "Surname") as? String,
             let bEmail: String = jsonObject.object(forKey: "Email") as? String,
             let bPhone: String = jsonObject.object(forKey: "Phone") as? String,
-            //let bCf: String = jsonObject.object(forKey: "Cf") as? String,
+            let bCf: String = jsonObject.object(forKey: "Cf") as? String,
             let bAddress: String = jsonObject.object(forKey: "Address") as? String,
             let bRole: String = jsonObject.object(forKey: "Role") as? String else {
                 print("Error: (Creating User Object)")
@@ -62,7 +62,7 @@ class Utente: NSObject,MessagingDelegate {
         role = bRole
         phone = bPhone
         address = bAddress
-        //cf = bCf
+        cf = bCf
         super.init()
     }
     
@@ -77,7 +77,7 @@ class Utente: NSObject,MessagingDelegate {
         UserDefaults.standard.set(GeneralUtil.shared.user.role, forKey: "role")
         UserDefaults.standard.set(GeneralUtil.shared.user.phone, forKey: "phone")
         UserDefaults.standard.set(GeneralUtil.shared.user.phone, forKey: "address")
-        //UserDefaults.standard.set(GeneralUtil.shared.user.phone, forKey: "cf")
+        UserDefaults.standard.set(GeneralUtil.shared.user.phone, forKey: "cf")
 
         
     }
@@ -121,7 +121,7 @@ class Utente: NSObject,MessagingDelegate {
         UserDefaults.standard.removeObject(forKey: "role")
         UserDefaults.standard.removeObject(forKey: "phone")
         UserDefaults.standard.removeObject(forKey: "address")
-        //UserDefaults.standard.removeObject(forKey: "cf")
+        UserDefaults.standard.removeObject(forKey: "cf")
 
         
         Messaging.messaging().connect { (error) in

@@ -24,13 +24,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gaf-xS-yCd" userLabel="Appuntamento View">
-                        <rect key="frame" x="10" y="-12" width="300" height="67"/>
+                        <rect key="frame" x="10" y="0.0" width="300" height="44"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="appuntamento" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4rI-xV-p9I">
-                                <rect key="frame" x="0.0" y="0.0" width="300" height="67"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="appuntamento" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4rI-xV-p9I">
+                                <rect key="frame" x="0.0" y="4" width="300" height="36"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="67" id="lVA-sg-26S"/>
+                                    <constraint firstAttribute="width" constant="300" id="QQG-3D-QgJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Hind-SemiBold" family="Hind" pointSize="20"/>
                                 <color key="textColor" red="0.16078431369999999" green="0.40784313729999999" blue="0.5450980392" alpha="1" colorSpace="calibratedRGB"/>
@@ -39,13 +39,20 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="4rI-xV-p9I" firstAttribute="leading" secondItem="Gaf-xS-yCd" secondAttribute="leading" constant="10" id="LdZ-DE-HJb"/>
-                            <constraint firstAttribute="bottom" secondItem="4rI-xV-p9I" secondAttribute="bottom" id="QAu-Fw-RA1"/>
-                            <constraint firstItem="4rI-xV-p9I" firstAttribute="top" secondItem="Gaf-xS-yCd" secondAttribute="top" id="VcO-09-lbs"/>
-                            <constraint firstAttribute="trailing" secondItem="4rI-xV-p9I" secondAttribute="trailing" id="doa-sC-df6"/>
+                            <constraint firstItem="4rI-xV-p9I" firstAttribute="leading" secondItem="Gaf-xS-yCd" secondAttribute="leading" id="AYn-id-PzX"/>
+                            <constraint firstItem="4rI-xV-p9I" firstAttribute="top" secondItem="Gaf-xS-yCd" secondAttribute="top" constant="4" id="Psy-Md-cEu"/>
+                            <constraint firstAttribute="trailing" secondItem="4rI-xV-p9I" secondAttribute="trailing" id="W6Q-q3-EXY"/>
+                            <constraint firstAttribute="bottom" secondItem="4rI-xV-p9I" secondAttribute="bottom" constant="4" id="ZXw-cO-ROP"/>
+                            <constraint firstAttribute="height" constant="44" id="fqC-7c-fXw"/>
                         </constraints>
                     </view>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="Gaf-xS-yCd" secondAttribute="bottom" id="74Q-AA-og4"/>
+                    <constraint firstAttribute="trailing" secondItem="Gaf-xS-yCd" secondAttribute="trailing" constant="10" id="D5B-Nb-Gyr"/>
+                    <constraint firstItem="Gaf-xS-yCd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="FuJ-Fi-29B"/>
+                    <constraint firstItem="Gaf-xS-yCd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Wyg-O7-XDq"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>

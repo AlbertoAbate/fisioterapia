@@ -12,6 +12,7 @@
             <connections>
                 <outlet property="TelefonoProfi" destination="wYH-be-4cV" id="qlh-BN-u0i"/>
                 <outlet property="cittaProfi" destination="kAe-fM-CQ7" id="aIx-yY-mcv"/>
+                <outlet property="codiceFiscaleProfi" destination="SqA-sQ-eDu" id="QdC-J4-ryq"/>
                 <outlet property="cognomeProfi" destination="tj6-kg-TYM" id="UZZ-o4-kNg"/>
                 <outlet property="emailProfi" destination="JID-n9-Gvi" id="sAR-hf-UEC"/>
                 <outlet property="indietro" destination="dpZ-Ef-Crc" id="cU9-Ko-0nS"/>
@@ -94,6 +95,15 @@
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Indirizzo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kAe-fM-CQ7">
                             <rect key="frame" x="8" y="227" width="353" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C.F." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SqA-sQ-eDu">
+                            <rect key="frame" x="8" y="275" width="353" height="40"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>

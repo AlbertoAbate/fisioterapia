@@ -11,6 +11,7 @@ import PMAlertController
 
 class SchermataViewController: UIViewController {
 
+    @IBOutlet weak var simbolo: UIImageView!
     @IBOutlet weak var imgLogout: UIImageView!
     @IBOutlet var lblCredits: UILabel!
     @IBOutlet var viewBttProtocolli: UIView!
@@ -20,6 +21,8 @@ class SchermataViewController: UIViewController {
     var blurEffectView: UIVisualEffectView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
 
         let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.light)
         blurEffectView = UIVisualEffectView(effect: blurEffect)
@@ -29,6 +32,12 @@ class SchermataViewController: UIViewController {
         blurEffectView.alpha = 0.85;
         self.view.addSubview(blurEffectView)
         // Do any additional setup after loading the view.
+        // Codice per capovolgere l'immagine orizzontalmente
+                if let originalImage = simbolo.image {
+                    let flippedImage = UIImage(cgImage: originalImage.cgImage!, scale: originalImage.scale, orientation: .upMirrored)
+                    simbolo.image = flippedImage
+                }
+        
     }
     
    

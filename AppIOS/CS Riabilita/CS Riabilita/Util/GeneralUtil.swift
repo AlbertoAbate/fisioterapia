@@ -123,6 +123,12 @@ final class GeneralUtil {
              print("phone:" + self.user.phone);
         }
         
+        let cf = UserDefaults.standard.string(forKey: "cf");
+        if (cf != nil  && cf != "")
+        {
+            self.user.cf = cf;
+             print("phone:" + self.user.cf);
+        }
         
     }
     

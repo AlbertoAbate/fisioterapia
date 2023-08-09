@@ -242,12 +242,14 @@ class AccediViewController: UIViewController {
                             else if (dataArr.status == "OK")
                             {
                                 
+                                
                                 //print("risultato token: ",dataArr.utente.token)
                                 dataArr.utente.initTopic();
                                 dataArr.utente.saveUtente();
                                 dataArr.utente.saveLocation();
                                 //GeneralUtil.shared.ordine.utente = dataArr.utente;
                                 //dataArr.utente.initTopic();
+                                
                                 self.showMsgLoginOK(title: Utility.getLbl(code: "BENVENUTO") + " " + dataArr.utente.nome, body: Utility.getLbl(code: "ACCESSOOK"))
                                 //self.txtUsername.text = "";
                                 //self.txtPassword.text = "";

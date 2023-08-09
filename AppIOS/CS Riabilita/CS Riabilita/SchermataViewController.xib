@@ -18,6 +18,7 @@
             <connections>
                 <outlet property="imgLogout" destination="2US-yA-uCQ" id="ifo-v9-4Gg"/>
                 <outlet property="lblCredits" destination="3Ag-zG-GbI" id="8n0-7i-LEr"/>
+                <outlet property="simbolo" destination="Gib-wn-tbC" id="sag-Fv-XBz"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="viewBttAreaRis" destination="lqS-Fs-4zQ" id="ODu-Kc-3sJ"/>
                 <outlet property="viewBttProtocolli" destination="20Y-Ef-rCW" id="QgC-P8-6d6"/>
@@ -30,10 +31,6 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="simbolo" translatesAutoresizingMaskIntoConstraints="NO" id="Gib-wn-tbC">
-                    <rect key="frame" x="-40" y="566" width="517" height="377"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill.xmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="2US-yA-uCQ">
                     <rect key="frame" x="334" y="49" width="49" height="53"/>
                     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -170,6 +167,10 @@
                         <constraint firstItem="wnp-n5-6mn" firstAttribute="bottom" secondItem="VQc-w7-NgM" secondAttribute="bottom" constant="22" id="wtS-d7-rmY"/>
                     </constraints>
                 </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="simbolo" translatesAutoresizingMaskIntoConstraints="NO" id="Gib-wn-tbC">
+                    <rect key="frame" x="-84" y="572" width="517" height="377"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.094117647058823528" green="0.3529411764705882" blue="0.49019607843137253" alpha="1" colorSpace="calibratedRGB"/>
