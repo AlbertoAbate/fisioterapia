@@ -19,7 +19,7 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="TerapiaTableViewCell" customModule="CS_Riabilita" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" translatesAutoresizingMaskIntoConstraints="NO" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" translatesAutoresizingMaskIntoConstraints="NO" id="H2p-sc-9uM" userLabel="spazioTer">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
@@ -50,6 +50,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="infoTerapia" destination="48T-dW-QBn" id="P2c-Wf-lPk"/>
+                <outlet property="spazioTer" destination="H2p-sc-9uM" id="NIi-hf-Jjc"/>
                 <outlet property="terapiaLabel" destination="U5Y-QH-tlG" id="E7y-qc-fea"/>
                 <outlet property="terapiaView" destination="Ykx-GA-fBV" id="oEG-0i-Iqw"/>
             </connections>

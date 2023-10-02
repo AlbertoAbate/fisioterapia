@@ -37,13 +37,18 @@ class RegistratiViewController: UIViewController {
     @IBOutlet var lblCognome: UITextField!
     @IBOutlet var lblNome: UITextField!
     var doveVado:String!
+    @IBOutlet weak var scrollRegistra: UIScrollView!
     @IBOutlet weak var lblCf: UITextField!
-    
+    var isKeyboardActive = false
+    var keyboardHeight: CGFloat = 0.0
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        lblCitta.keyboardAppearance = .default
+        lblCf.keyboardAppearance = .default
+
         
         let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.light)
         blurEffectView = UIVisualEffectView(effect: blurEffect)
@@ -62,10 +67,64 @@ class RegistratiViewController: UIViewController {
         bttRegistrati.layer.cornerRadius = 10;
         bttRegistrati.setTitle(Utility.getLbl(code: "DOREGISTRATI"), for: .normal)
         lblTelefono.keyboardType = .numberPad
-
+        
+        lblNome.textColor = UIColor.black
+        lblNome.backgroundColor = UIColor.white
+        lblNome.attributedPlaceholder = NSAttributedString(string: "Nome...", attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
+        lblCognome.textColor = UIColor.black
+        lblCognome.backgroundColor = UIColor.white
+        lblCognome.attributedPlaceholder = NSAttributedString(string: "Cognome...", attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
+        lblEmail.textColor = UIColor.black
+        lblEmail.backgroundColor = UIColor.white
+        lblEmail.attributedPlaceholder = NSAttributedString(string: "E-mail...", attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
+        lblPassword.textColor = UIColor.black
+        lblPassword.backgroundColor = UIColor.white
+        lblPassword.attributedPlaceholder = NSAttributedString(string: "Password...", attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
+        lblConfermaPass.textColor = UIColor.black
+        lblConfermaPass.backgroundColor = UIColor.white
+        lblConfermaPass.attributedPlaceholder = NSAttributedString(string: "Conferma password...", attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
+        lblTelefono.textColor = UIColor.black
+        lblTelefono.backgroundColor = UIColor.white
+        lblTelefono.attributedPlaceholder = NSAttributedString(string: "Telefono...", attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
+        lblCitta.textColor = UIColor.black
+        lblCitta.backgroundColor = UIColor.white
+        lblCitta.attributedPlaceholder = NSAttributedString(string: "Città...", attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
+        lblCf.textColor = UIColor.black
+        lblCf.backgroundColor = UIColor.white
+        lblCf.attributedPlaceholder = NSAttributedString(string: "Codice Fiscale...", attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
+        
         self.hideKeyboardWhenTappedAround()
+        
+        // Aggiungi un'osservazione per la notifica della tastiera
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+                NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)    }
+
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            keyboardHeight = keyboardSize.height
+            if !isKeyboardActive {
+                // Sposta la UIScrollView verso l'alto solo se la tastiera non è già attiva
+                scrollRegistra.contentInset.bottom += keyboardHeight
+                scrollRegistra.scrollIndicatorInsets.bottom += keyboardHeight
+                isKeyboardActive = true
+            }
+        }
     }
 
+
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if isKeyboardActive {
+            // Ripristina l'offset della UIScrollView solo se la tastiera è attualmente attiva
+            scrollRegistra.contentInset.bottom -= keyboardHeight
+            scrollRegistra.scrollIndicatorInsets.bottom -= keyboardHeight
+            isKeyboardActive = false
+        }
+    }
+
+
+        deinit {
+            NotificationCenter.default.removeObserver(self)
+        }
 
     @objc func chiudi()
              {

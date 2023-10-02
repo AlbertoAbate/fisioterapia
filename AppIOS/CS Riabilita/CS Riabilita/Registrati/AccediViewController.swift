@@ -29,6 +29,17 @@ class AccediViewController: UIViewController {
         lblInfoAccedi.text = Utility.getLbl(code: "INFOACCEDI")
         bttRegistrati.setTitle(Utility.getLbl(code: "ENTRA"), for: .normal)
         bttrecuperaPass.setTitle(Utility.getLbl(code: "RECUPERAPWD"), for: .normal)
+        
+        txtTel.textColor = UIColor.black
+            txtPass.textColor = UIColor.black
+            
+            // Set the background color of txtTel and txtPass to white
+            txtTel.backgroundColor = UIColor.white
+            txtPass.backgroundColor = UIColor.white
+            
+            // Set the placeholder text color for txtTel and txtPass to black
+            txtTel.attributedPlaceholder = NSAttributedString(string: "Telefono...", attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
+            txtPass.attributedPlaceholder = NSAttributedString(string: "Password...", attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
         // Do any additional setup after loading the view.
         bttRegistrati.layer.cornerRadius = 10;
         let tapGestureRecognizerEntra = UITapGestureRecognizer(target: self, action:  #selector(chiudi))

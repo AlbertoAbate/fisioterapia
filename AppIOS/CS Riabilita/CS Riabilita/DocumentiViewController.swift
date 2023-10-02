@@ -14,6 +14,7 @@ class DocumentiViewController: UIViewController, UITableViewDataSource, UITableV
     var type: String!
     var documentURL: String? // Proprietà per memorizzare l'URL dei documenti
     
+    @IBOutlet weak var nessunDocumento: UILabel!
     @IBOutlet weak var logoBianco: UIImageView!
     @IBOutlet weak var indietro: UIButton!
     @IBOutlet weak var DocumentiTableView: UITableView!
@@ -27,9 +28,13 @@ class DocumentiViewController: UIViewController, UITableViewDataSource, UITableV
         DocumentiTableView.register(UINib(nibName: "DocumentoTableViewCell", bundle: nil), forCellReuseIdentifier: "DocumentoTableViewCell")
         DocumentiTableView.delegate = self
         DocumentiTableView.dataSource = self
-        
+        DocumentiTableView.backgroundColor = UIColor.white
+
         loadDocumenti(side: "NUOVI")
         indietro.setTitle(Utility.getLbl(code: "TORNAINDIETRO"), for: .normal)
+        
+        nessunDocumento.isHidden = true
+
     }
     
     @IBAction func tornaIndietro(_ sender: UIButton) {
@@ -73,6 +78,16 @@ class DocumentiViewController: UIViewController, UITableViewDataSource, UITableV
                     }
                     
                     self.DocumentiTableView.reloadData()
+                    
+                    // Controllo se la lista degli appuntamenti è vuota
+                        if self.documentiList.isEmpty {
+                            self.nessunDocumento.isHidden = false
+                            self.DocumentiTableView.isHidden = true
+                        } else {
+                            self.nessunDocumento.isHidden = true
+                            self.DocumentiTableView.isHidden = false
+                            self.DocumentiTableView.reloadData()
+                        }
                     
                 } catch {
                     print("Error: (Retrieving Data)")

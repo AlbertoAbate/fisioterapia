@@ -11,12 +11,15 @@ import UIKit
 class TerapiaTableViewCell: UITableViewCell {
 
 
+    @IBOutlet weak var spazioTer: UIView!
     @IBOutlet weak var infoTerapia: UIImageView!
     @IBOutlet weak var terapiaLabel: UILabel!
     @IBOutlet weak var terapiaView: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        spazioTer.backgroundColor = UIColor.white
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

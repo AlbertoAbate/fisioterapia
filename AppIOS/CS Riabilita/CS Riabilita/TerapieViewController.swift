@@ -15,6 +15,7 @@ class TerapieViewController: UIViewController, UITableViewDataSource, UITableVie
     var type:String!
     
     
+    @IBOutlet weak var nessunaTerapia: UILabel!
     @IBOutlet weak var TerapieTableView: UITableView!
     @IBOutlet weak var indietro: UIButton!
     var terapieList = [Terapia]()
@@ -27,10 +28,15 @@ class TerapieViewController: UIViewController, UITableViewDataSource, UITableVie
         TerapieTableView.register(UINib(nibName: "TerapiaTableViewCell", bundle: nil), forCellReuseIdentifier: "TerapiaTableViewCell")
         TerapieTableView.delegate = self
         TerapieTableView.dataSource = self
+        TerapieTableView.backgroundColor = UIColor.white
+
         
         loadTerapie(side:"IN CORSO", allTerapie: "0");
         indietro.setTitle(Utility.getLbl(code: "TORNAINDIETRO"), for: .normal)
         // Do any additional setup after loading the view.
+        
+        nessunaTerapia.isHidden = true
+
     }
     
     @IBAction func tornaIndietro(_ sender: UIButton) {
@@ -82,6 +88,16 @@ class TerapieViewController: UIViewController, UITableViewDataSource, UITableVie
                     
                     self.terapieList = filteredTerapie
                     self.TerapieTableView.reloadData()
+                    
+                    // Controllo se la lista degli appuntamenti è vuota
+                        if self.terapieList.isEmpty {
+                            self.nessunaTerapia.isHidden = false
+                            self.TerapieTableView.isHidden = true
+                        } else {
+                            self.nessunaTerapia.isHidden = true
+                            self.TerapieTableView.isHidden = false
+                            self.TerapieTableView.reloadData()
+                        }
                     
                 } catch {
                     print("Error: (Retrieving Data)")

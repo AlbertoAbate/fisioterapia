@@ -31,7 +31,7 @@ class ViewController: UIViewController {
     func startAll()
     {
         DispatchQueue.main.async(){
-              let vc = SchermataViewController()
+              let vc = AccessoViewController()
           vc.modalPresentationStyle = .overFullScreen //or .overFullScreen for transparency
               self.present(vc, animated: true, completion: nil)
       }

@@ -31,27 +31,39 @@ class ProfiloViewController: UIViewController {
         nomeProfi.text = GeneralUtil.shared.user.nome
         nomeProfi.layer.cornerRadius = 10;
         nomeProfi.clipsToBounds = true
+        nomeProfi.textColor = UIColor.black
+        nomeProfi.backgroundColor = UIColor.white
         
         cognomeProfi.text =  GeneralUtil.shared.user.cognome
         cognomeProfi.layer.cornerRadius = 10;
         cognomeProfi.clipsToBounds = true
-
+        cognomeProfi.textColor = UIColor.black
+        cognomeProfi.backgroundColor = UIColor.white
+        
         emailProfi.text = GeneralUtil.shared.user.email
         emailProfi.layer.cornerRadius = 10;
         emailProfi.clipsToBounds = true
+        emailProfi.textColor = UIColor.black
+        emailProfi.backgroundColor = UIColor.white
         
         //cfProfi.text = GeneralUtil.shared.user.cf
         TelefonoProfi.text = GeneralUtil.shared.user.phone
         TelefonoProfi.layer.cornerRadius = 10;
         TelefonoProfi.clipsToBounds = true
+        TelefonoProfi.textColor = UIColor.black
+        TelefonoProfi.backgroundColor = UIColor.white
         
         cittaProfi.text = GeneralUtil.shared.user.address
         cittaProfi.layer.cornerRadius = 10;
         cittaProfi.clipsToBounds = true
+        cittaProfi.textColor = UIColor.black
+        cittaProfi.backgroundColor = UIColor.white
         
         codiceFiscaleProfi.text = GeneralUtil.shared.user.cf
         codiceFiscaleProfi.layer.cornerRadius = 10;
         codiceFiscaleProfi.clipsToBounds = true
+        codiceFiscaleProfi.textColor = UIColor.black
+        codiceFiscaleProfi.backgroundColor = UIColor.white
         
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.headIndent = 10

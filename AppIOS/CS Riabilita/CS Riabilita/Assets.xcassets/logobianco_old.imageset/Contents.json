@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Rizzo Salus_logo_white.png",
+      "filename" : "nuovologo.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "nuovologo 1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "nuovologo 2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

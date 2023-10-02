@@ -28,7 +28,8 @@ class AppuntamentiViewController: UIViewController, UITableViewDataSource, UITab
         AppuntamentiTableView.register(UINib(nibName: "AppuntamentoTableViewCell", bundle: nil), forCellReuseIdentifier: "AppuntamentoTableViewCell")
         AppuntamentiTableView.delegate = self
         AppuntamentiTableView.dataSource = self
-        
+        AppuntamentiTableView.backgroundColor = UIColor.white
+
         loadAppuntamenti(side: "NUOVI", allAppuntamenti: "0")
         indietro.setTitle(Utility.getLbl(code: "TORNAINDIETRO"), for: .normal)
         

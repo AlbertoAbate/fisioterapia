@@ -30,6 +30,7 @@
                 <outlet property="lblPassword" destination="eE0-Zw-aYG" id="far-zn-8Or"/>
                 <outlet property="lblTelefono" destination="rW5-gM-aNY" id="566-qJ-wp5"/>
                 <outlet property="lblTitle" destination="YLo-Jg-jfE" id="tj5-eG-7zw"/>
+                <outlet property="scrollRegistra" destination="Hgb-1d-RQB" id="izE-RS-slC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -86,14 +87,14 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hgb-1d-RQB">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hgb-1d-RQB">
                     <rect key="frame" x="20" y="192" width="374" height="616"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V8J-d8-Rct">
                             <rect key="frame" x="8" y="8" width="358" height="34"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="34" id="EfX-zX-MRE"/>
+                                <constraint firstAttribute="height" constant="34" id="EfX-zX-MRE" userLabel="height = 30"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="Hind-Regular" family="Hind" pointSize="17"/>
                             <textInputTraits key="textInputTraits"/>
@@ -102,7 +103,7 @@
                             <rect key="frame" x="8" y="50" width="358" height="34"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="34" id="dn1-Pb-aR6"/>
+                                <constraint firstAttribute="height" constant="34" id="dn1-Pb-aR6" userLabel="height = 30"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="Hind-Regular" family="Hind" pointSize="17"/>
                             <textInputTraits key="textInputTraits"/>
@@ -111,7 +112,7 @@
                             <rect key="frame" x="8" y="92" width="358" height="34"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="34" id="7D5-vA-bE0"/>
+                                <constraint firstAttribute="height" constant="34" id="7D5-vA-bE0" userLabel="height = 30"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="Hind-Regular" family="Hind" pointSize="17"/>
                             <textInputTraits key="textInputTraits" textContentType="email"/>
@@ -120,7 +121,7 @@
                             <rect key="frame" x="8" y="134" width="358" height="34"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="34" id="Jqh-fB-V06"/>
+                                <constraint firstAttribute="height" constant="34" id="Jqh-fB-V06" userLabel="height = 30"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="Hind-Regular" family="Hind" pointSize="17"/>
                             <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
@@ -129,7 +130,7 @@
                             <rect key="frame" x="8" y="176" width="358" height="34"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="34" id="jWe-sB-8MX"/>
+                                <constraint firstAttribute="height" constant="34" id="jWe-sB-8MX" userLabel="height = 30"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="Hind-Regular" family="Hind" pointSize="17"/>
                             <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
@@ -138,25 +139,25 @@
                             <rect key="frame" x="8" y="218" width="358" height="34"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="34" id="iDd-zh-t7Q"/>
+                                <constraint firstAttribute="height" constant="34" id="iDd-zh-t7Q" userLabel="height = 30"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="Hind-Regular" family="Hind" pointSize="17"/>
                             <textInputTraits key="textInputTraits" textContentType="tel"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Indirizzo..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BeR-C3-Lh2">
-                            <rect key="frame" x="8" y="260" width="358" height="21"/>
+                            <rect key="frame" x="8" y="260" width="358" height="34"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="34" id="FIq-N3-os6"/>
+                                <constraint firstAttribute="height" constant="34" id="FIq-N3-os6" userLabel="height = 30"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="Hind-Regular" family="Hind" pointSize="17"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Codice Fiscale..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nVj-mD-Fat" userLabel="Codice Fiscale...">
-                            <rect key="frame" x="8" y="291" width="358" height="34"/>
+                            <rect key="frame" x="8" y="304" width="358" height="34"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="34" id="6ca-GE-goI"/>
+                                <constraint firstAttribute="height" constant="34" id="6ca-GE-goI" userLabel="height = 30"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="Hind-Regular" family="Hind" pointSize="17"/>
                             <textInputTraits key="textInputTraits"/>
@@ -166,7 +167,6 @@
                         <constraint firstItem="5cx-mT-9VS" firstAttribute="leading" secondItem="tec-ib-MpD" secondAttribute="leading" constant="8" id="2z9-0D-IWA"/>
                         <constraint firstItem="BeR-C3-Lh2" firstAttribute="leading" secondItem="tec-ib-MpD" secondAttribute="leading" constant="8" id="6bW-tt-ak2"/>
                         <constraint firstItem="fJq-Pe-KkP" firstAttribute="top" secondItem="eE0-Zw-aYG" secondAttribute="bottom" constant="8" symbolic="YES" id="7m0-6a-LUS"/>
-                        <constraint firstItem="nVj-mD-Fat" firstAttribute="top" secondItem="rW5-gM-aNY" secondAttribute="bottom" constant="39" id="HFn-fU-7Ry" userLabel="Codice Fiscale....top = Città....bottom + 39"/>
                         <constraint firstItem="BeR-C3-Lh2" firstAttribute="top" secondItem="rW5-gM-aNY" secondAttribute="bottom" constant="8" symbolic="YES" id="HJb-lb-alV"/>
                         <constraint firstItem="5cx-mT-9VS" firstAttribute="top" secondItem="8Te-0n-Vjl" secondAttribute="bottom" constant="8" symbolic="YES" id="JBC-Of-sSr"/>
                         <constraint firstItem="rW5-gM-aNY" firstAttribute="top" secondItem="fJq-Pe-KkP" secondAttribute="bottom" constant="8" symbolic="YES" id="NgH-t0-71o"/>
@@ -221,6 +221,6 @@
     </objects>
     <resources>
         <image name="chevron.backward" catalog="system" width="97" height="128"/>
-        <image name="logobianco" width="826" height="252.5"/>
+        <image name="logobianco" width="900" height="300"/>
     </resources>
 </document>

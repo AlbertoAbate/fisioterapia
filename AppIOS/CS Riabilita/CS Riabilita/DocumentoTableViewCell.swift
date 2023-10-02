@@ -10,12 +10,18 @@ import UIKit
 
 class DocumentoTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var spazioDoc: UIView!
     @IBOutlet weak var pdfImage: UIImageView!
     @IBOutlet weak var DocLabel: UILabel!
     @IBOutlet weak var DocView: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        spazioDoc.backgroundColor = UIColor.white
+        DocView.backgroundColor = UIColor.white
+
+
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

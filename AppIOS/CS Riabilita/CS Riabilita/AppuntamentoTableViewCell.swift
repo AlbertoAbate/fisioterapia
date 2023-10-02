@@ -10,12 +10,17 @@ import UIKit
 
 class AppuntamentoTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var spazioAppu: UIView!
     @IBOutlet weak var appuntamentoLabel: UILabel!
     @IBOutlet weak var AppunntamentoView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        spazioAppu.backgroundColor = UIColor.white
+        AppunntamentoView.backgroundColor = UIColor.white
+
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

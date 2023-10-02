@@ -58,6 +58,7 @@
             <connections>
                 <outlet property="AppunntamentoView" destination="Gaf-xS-yCd" id="jQt-ta-BZR"/>
                 <outlet property="appuntamentoLabel" destination="4rI-xV-p9I" id="kWe-6a-UcA"/>
+                <outlet property="spazioAppu" destination="H2p-sc-9uM" id="UNK-p1-fGj"/>
             </connections>
             <point key="canvasLocation" x="-41.221374045801525" y="19.718309859154932"/>
         </tableViewCell>

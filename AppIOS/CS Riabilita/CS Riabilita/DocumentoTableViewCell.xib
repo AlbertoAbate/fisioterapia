@@ -68,6 +68,7 @@
                 <outlet property="DocLabel" destination="dDE-1B-iuX" id="Sf7-Us-hDC"/>
                 <outlet property="DocView" destination="aXe-Vo-TLS" id="wjH-pt-Gw0"/>
                 <outlet property="pdfImage" destination="odn-9N-UO9" id="XX1-oO-yO8"/>
+                <outlet property="spazioDoc" destination="H2p-sc-9uM" id="c9G-2B-HEs"/>
             </connections>
             <point key="canvasLocation" x="-44.274809160305338" y="19.718309859154932"/>
         </tableViewCell>

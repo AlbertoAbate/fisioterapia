@@ -26,16 +26,6 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="dpZ-Ef-Crc">
-                    <rect key="frame" x="132" y="761" width="129" height="35"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Torna indietro"/>
-                    <connections>
-                        <action selector="tornaIndietro:" destination="-1" eventType="touchUpInside" id="r9h-mj-LtN"/>
-                    </connections>
-                </button>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilo" id="ygX-Y1-mU3">
                     <rect key="frame" x="47" y="134" width="54" height="68"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -55,7 +45,7 @@
                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                 </label>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="7uT-LF-aCa">
-                    <rect key="frame" x="8" y="260" width="369" height="467"/>
+                    <rect key="frame" x="8" y="260" width="369" height="335"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="V0p-tc-n4h">
@@ -116,6 +106,16 @@
                     <viewLayoutGuide key="contentLayoutGuide" id="299-k0-vFO"/>
                     <viewLayoutGuide key="frameLayoutGuide" id="oSo-sA-xPf"/>
                 </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="dpZ-Ef-Crc">
+                    <rect key="frame" x="128" y="603" width="129" height="35"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Torna indietro"/>
+                    <connections>
+                        <action selector="tornaIndietro:" destination="-1" eventType="touchUpInside" id="r9h-mj-LtN"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.094117647058823528" green="0.3529411764705882" blue="0.49019607843137253" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -128,7 +128,7 @@
         </view>
     </objects>
     <resources>
-        <image name="logobianco" width="550.66668701171875" height="168.33332824707031"/>
+        <image name="logobianco" width="900" height="300"/>
         <image name="profilo" width="146" height="148"/>
     </resources>
 </document>

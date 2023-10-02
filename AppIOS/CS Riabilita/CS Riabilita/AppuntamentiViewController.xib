@@ -23,16 +23,6 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="5fi-At-vBU">
-                    <rect key="frame" x="132" y="754" width="129" height="35"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Torna indietro"/>
-                    <connections>
-                        <action selector="tornaIndietro:" destination="-1" eventType="touchUpInside" id="Vgj-Vy-7Bk"/>
-                    </connections>
-                </button>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logobianco" translatesAutoresizingMaskIntoConstraints="NO" id="1Ss-J5-1ML">
                     <rect key="frame" x="20" y="69" width="353" height="48"/>
                     <constraints>
@@ -61,7 +51,7 @@
                     </connections>
                 </segmentedControl>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="blp-TC-8ym">
-                    <rect key="frame" x="0.0" y="284" width="393" height="440"/>
+                    <rect key="frame" x="0.0" y="284" width="393" height="294"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
@@ -78,6 +68,16 @@
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="5fi-At-vBU">
+                    <rect key="frame" x="132" y="601" width="129" height="35"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Torna indietro"/>
+                    <connections>
+                        <action selector="tornaIndietro:" destination="-1" eventType="touchUpInside" id="Vgj-Vy-7Bk"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.094117647058823528" green="0.3529411764705882" blue="0.49019607843137253" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -98,7 +98,7 @@
     </objects>
     <resources>
         <image name="appuntamenti" width="146" height="148"/>
-        <image name="logobianco" width="550.66668701171875" height="168.33332824707031"/>
+        <image name="logobianco" width="900" height="300"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

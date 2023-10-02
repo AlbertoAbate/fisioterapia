@@ -38,15 +38,11 @@ class SchermataViewController: UIViewController {
                     simbolo.image = flippedImage
                 }
         
-    }
-    
-   
+        viewBttProtocolli.backgroundColor = UIColor.white
+        viewProfilo.backgroundColor = UIColor.white
+        viewDocumenti.backgroundColor = UIColor.white
+        viewBttAreaRis.backgroundColor = UIColor.white
 
-
-    override func viewWillAppear(_ animated: Bool) {
-        Utility.setGradientBackground(v:self.view)
-        super.viewWillAppear(animated)
-        
         viewBttAreaRis.layer.cornerRadius = 10;
         viewBttProtocolli.layer.cornerRadius = 10;
         viewProfilo.layer.cornerRadius = 10;
@@ -108,6 +104,16 @@ class SchermataViewController: UIViewController {
         {
             lblCredits.text = Utility.getLbl(code: "CREDITS");
         }
+    }
+    
+   
+
+
+    override func viewWillAppear(_ animated: Bool) {
+        Utility.setGradientBackground(v:self.view)
+        super.viewWillAppear(animated)
+        
+        
     }
     /*
     let tapGestureRecognizer = UITapGestureRecognizer(target: self, action:  #selector(vaiProtocolli))
